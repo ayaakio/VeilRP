@@ -4,6 +4,16 @@ body {
   background: #12081f;
   color: #f0e6ff;
   text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav {
@@ -20,6 +30,11 @@ body {
   color: #d9b8ff;
   text-decoration: none;
   font-weight: bold;
+}
+
+.nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(181, 124, 255, 0.8);
 }
 
 .menu-wrapper {
@@ -40,6 +55,20 @@ body {
   width: 220px;
   max-width: 75%;
   margin-bottom: 18px;
+  filter: drop-shadow(0 0 25px rgba(181, 124, 255, 0.7));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .hero p {
@@ -70,6 +99,14 @@ body {
   background: #241038;
   border: 1px solid #6c3aa5;
   box-sizing: border-box;
+  box-shadow: 0 0 22px rgba(108, 58, 165, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #a96df0;
+  box-shadow: 0 0 28px rgba(181, 124, 255, 0.4);
 }
 
 .menu-card h2 {
@@ -105,6 +142,7 @@ body {
   padding: 22px;
   margin-bottom: 24px;
   box-sizing: border-box;
+  box-shadow: 0 0 18px rgba(108, 58, 165, 0.2);
 }
 
 .sub-header {
