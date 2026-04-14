@@ -30,11 +30,13 @@ body {
   color: #d9b8ff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .nav a:hover {
   color: #ffffff;
   text-shadow: 0 0 12px rgba(181, 124, 255, 0.8);
+  transform: translateY(-1px);
 }
 
 .menu-wrapper {
@@ -57,6 +59,12 @@ body {
   margin-bottom: 18px;
   filter: drop-shadow(0 0 25px rgba(181, 124, 255, 0.7));
   animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 36px rgba(181, 124, 255, 0.95));
 }
 
 @keyframes float {
@@ -100,25 +108,41 @@ body {
   border: 1px solid #6c3aa5;
   box-sizing: border-box;
   box-shadow: 0 0 22px rgba(108, 58, 165, 0.22);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  border-color: #a96df0;
-  box-shadow: 0 0 28px rgba(181, 124, 255, 0.4);
+  transform: translateY(-10px) scale(1.04);
+  border-color: #b98cff;
+  box-shadow: 0 0 34px rgba(181, 124, 255, 0.42);
+  background: #2b1342;
 }
 
 .menu-card h2 {
   margin: 0 0 10px;
   font-size: 1.8rem;
   color: #ebd8ff;
+  transition: transform 0.28s ease, color 0.28s ease;
 }
 
 .menu-card p {
   margin: 0;
   font-size: 0.95rem;
   color: #cfb8eb;
+  transition: color 0.28s ease;
+}
+
+.menu-card:hover h2 {
+  transform: scale(1.03);
+  color: #f3e6ff;
+}
+
+.menu-card:hover p {
+  color: #e0cdf7;
 }
 
 .container {
@@ -143,6 +167,12 @@ body {
   margin-bottom: 24px;
   box-sizing: border-box;
   box-shadow: 0 0 18px rgba(108, 58, 165, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px rgba(181, 124, 255, 0.28);
 }
 
 .sub-header {
