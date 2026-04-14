@@ -23,7 +23,7 @@ body::before {
 .nav {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 28px;
   padding: 18px 24px;
   background: rgba(16, 10, 28, 0.55);
   border-bottom: 1px solid rgba(181, 124, 255, 0.25);
@@ -31,6 +31,7 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 50;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -46,7 +47,7 @@ body::before {
 }
 
 .menu-wrapper {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 78px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +57,7 @@ body::before {
 }
 
 .hero {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .hero h1 {
@@ -75,18 +76,15 @@ body::before {
 
 .menu-grid {
   width: 100%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 28px;
-  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .menu-card {
-  width: 260px;
-  min-height: 170px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,14 +121,12 @@ body::before {
   margin: 0 0 12px;
   font-size: 2rem;
   color: #e6ccff;
-  text-decoration: none;
 }
 
 .menu-card p {
   margin: 0;
   font-size: 1rem;
   color: #c9b4e7;
-  text-decoration: none;
 }
 
 .container {
@@ -184,4 +180,19 @@ footer {
   text-align: center;
   color: #a996c7;
   margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .menu-card {
+    min-height: 160px;
+  }
 }
