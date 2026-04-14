@@ -208,3 +208,15 @@ footer {
     max-width: 420px;
   }
 }
+/* ===== TIER GRID (Gang Page) ===== */
+.tier-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.tier-box {
+  height: 100%;
+}
