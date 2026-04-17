@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Team</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="rules.html">Rules</a>
+    <a href="staff.html">Staff</a>
+    <a href="gang.html">Gang Rules</a>
+    <a href="business.html">Business</a>
+  </nav>
+
+  <div class="menu-wrapper">
+
+    <header class="hero">
+      <img src="logo.png" alt="VeilRP Logo" class="logo">
+    </header>
+
+    <div id="staff-sections"></div>
+
+  </div>
+
+  <script>
+    async function loadStaff() {
+      const response = await fetch("staff.json");
+      const data = await response.json();
+
+      const container = document.getElementById("staff-sections");
+
+      data.forEach(section => {
+        const title = document.createElement("h2");
+        title.className = "staff-section-title";
+        title.textContent = section.section;
+
+        const grid = document.createElement("div");
+        grid.className = "staff-grid";
+
+        section.members.forEach(member => {
+          const card = document.createElement("div");
+          card.className = "staff-card";
+
+          card.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" class="staff-img">
+            <p class="staff-name">${member.name}</p>
+            <p class="staff-rank">${member.rank}</p>
+          `;
+
+          grid.appendChild(card);
+        });
+
+        container.appendChild(title);
+        container.appendChild(grid);
+      });
+    }
+
+    loadStaff();
+  </script>
+
+</body>
+</html>
