@@ -15,30 +15,25 @@
     ]
   },
   {
-    "section": "Opal",
+    "section": "Community Manager",
     "members": [
       {
-        "name": "Name",
+        "name": "Opal",
         "rank": "Community Manager",
         "image": "https://cdn.discordapp.com/embed/avatars/2.png"
-      }
-    ]
-  },
-   {
-    "section": "Zwozymo",
-    "members": [
+      },
       {
-        "name": "Name",
+        "name": "Zwozymo",
         "rank": "Community Manager",
         "image": "https://cdn.discordapp.com/embed/avatars/2.png"
       }
     ]
   },
   {
-    "section": "NovaDave",
+    "section": "Administrator",
     "members": [
       {
-        "name": "Name",
+        "name": "NovaDave",
         "rank": "Administrator",
         "image": "https://cdn.discordapp.com/embed/avatars/3.png"
       }
