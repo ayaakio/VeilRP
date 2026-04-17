@@ -5,12 +5,12 @@
       {
         "name": "Akio",
         "rank": "Owner",
-        "image": "https://cdn.discordapp.com/embed/avatars/0.png"
+        "image": "akio.png"
       },
       {
         "name": "Kazzi",
         "rank": "Owner",
-        "image": "https://cdn.discordapp.com/embed/avatars/1.png"
+        "image": "kazzi.png"
       }
     ]
   },
@@ -20,7 +20,7 @@
       {
         "name": "Opal",
         "rank": "Community Manager",
-        "image": "https://cdn.discordapp.com/embed/avatars/2.png"
+        "image": "opal.png"
       },
       {
         "name": "Zwozymo",
@@ -35,7 +35,7 @@
       {
         "name": "NovaDave",
         "rank": "Administrator",
-        "image": "https://cdn.discordapp.com/embed/avatars/3.png"
+        "image": "novadave.png"
       }
     ]
   },
@@ -65,7 +65,7 @@
       {
         "name": "Frey",
         "rank": "Media Manager",
-        "image": "https://cdn.discordapp.com/embed/avatars/2.png"
+        "image": "frey.png"
       }
     ]
   }
