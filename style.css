@@ -230,3 +230,48 @@ footer {
     max-width: 420px;
   }
 }
+.staff-section-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #cfe6ff;
+  text-align: center;
+}
+
+.staff-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.staff-card {
+  text-align: center;
+  width: 140px;
+}
+
+.staff-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 25px;
+  filter: drop-shadow(0 0 20px rgba(140, 80, 255, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.staff-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 35px rgba(140, 80, 255, 0.9));
+}
+
+.staff-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.staff-rank {
+  font-size: 0.9rem;
+  color: #a9cfff;
+}
