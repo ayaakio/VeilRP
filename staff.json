@@ -1,0 +1,77 @@
+[
+  {
+    "section": "Owners",
+    "members": [
+      {
+        "name": "Akio",
+        "rank": "Owner",
+        "image": "https://cdn.discordapp.com/embed/avatars/0.png"
+      },
+      {
+        "name": "Kazzi",
+        "rank": "Owner",
+        "image": "https://cdn.discordapp.com/embed/avatars/1.png"
+      }
+    ]
+  },
+  {
+    "section": "Opal",
+    "members": [
+      {
+        "name": "Name",
+        "rank": "Community Manager",
+        "image": "https://cdn.discordapp.com/embed/avatars/2.png"
+      }
+    ]
+  },
+   {
+    "section": "Zwozymo",
+    "members": [
+      {
+        "name": "Name",
+        "rank": "Community Manager",
+        "image": "https://cdn.discordapp.com/embed/avatars/2.png"
+      }
+    ]
+  },
+  {
+    "section": "NovaDave",
+    "members": [
+      {
+        "name": "Name",
+        "rank": "Administrator",
+        "image": "https://cdn.discordapp.com/embed/avatars/3.png"
+      }
+    ]
+  },
+  {
+    "section": "Moderators",
+    "members": [
+      {
+        "name": "N/A",
+        "rank": "Moderator",
+        "image": "https://cdn.discordapp.com/embed/avatars/4.png"
+      },
+      {
+        "name": "N/A",
+        "rank": "Moderator",
+        "image": "https://cdn.discordapp.com/embed/avatars/0.png"
+      }
+    ]
+  },
+  {
+    "section": "Development & Media",
+    "members": [
+      {
+        "name": "N/A",
+        "rank": "Developer",
+        "image": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      {
+        "name": "Frey",
+        "rank": "Media Manager",
+        "image": "https://cdn.discordapp.com/embed/avatars/2.png"
+      }
+    ]
+  }
+]
