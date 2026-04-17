@@ -17,46 +17,56 @@
   </nav>
 
   <div class="menu-wrapper">
-
     <header class="hero">
       <img src="logo.png" alt="VeilRP Logo" class="logo">
     </header>
 
     <div id="staff-sections"></div>
-
   </div>
 
   <script>
     async function loadStaff() {
-      const response = await fetch("staff.json");
-      const data = await response.json();
+      try {
+        const response = await fetch("staff.json");
+        if (!response.ok) {
+          throw new Error("Could not load staff.json");
+        }
 
-      const container = document.getElementById("staff-sections");
+        const data = await response.json();
+        const container = document.getElementById("staff-sections");
+        container.innerHTML = "";
 
-      data.forEach(section => {
-        const title = document.createElement("h2");
-        title.className = "staff-section-title";
-        title.textContent = section.section;
+        data.forEach(section => {
+          const title = document.createElement("h2");
+          title.className = "staff-section-title";
+          title.textContent = section.section;
 
-        const grid = document.createElement("div");
-        grid.className = "staff-grid";
+          const grid = document.createElement("div");
+          grid.className = "staff-grid";
 
-        section.members.forEach(member => {
-          const card = document.createElement("div");
-          card.className = "staff-card";
+          section.members.forEach(member => {
+            const card = document.createElement("div");
+            card.className = "staff-card";
 
-         card.innerHTML = `
-        <img src="${member.image}" alt="${member.name}" class="staff-img">
-        <p class="staff-name">${member.name}</p>
-      `;
-          `;
+            card.innerHTML = `
+              <img src="${member.image}" alt="${member.name}" class="staff-img">
+              <p class="staff-name">${member.name}</p>
+            `;
 
-          grid.appendChild(card);
+            grid.appendChild(card);
+          });
+
+          container.appendChild(title);
+          container.appendChild(grid);
         });
-
-        container.appendChild(title);
-        container.appendChild(grid);
-      });
+      } catch (error) {
+        console.error(error);
+        document.getElementById("staff-sections").innerHTML = `
+          <p style="text-align:center; color:#ffb3b3; margin-top:20px;">
+            Staff list failed to load.
+          </p>
+        `;
+      }
     }
 
     loadStaff();
