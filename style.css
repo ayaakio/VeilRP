@@ -16,19 +16,18 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: var(--white);
+  color: white;
   text-align: center;
   min-height: 100vh;
   overflow-x: hidden;
 
   background:
-    radial-gradient(circle at 25% 20%, rgba(255, 47, 179, 0.22), transparent 22%),
-    radial-gradient(circle at 75% 20%, rgba(0, 240, 255, 0.35), transparent 28%),
-    radial-gradient(circle at 50% 85%, rgba(0, 240, 255, 0.30), transparent 34%),
-    linear-gradient(135deg, #002f45 0%, #004f66 35%, #006f82 70%, #0090a6 100%);
-
-  background-size: 140% 140%;
-  animation: backgroundFlow 10s ease-in-out infinite alternate;
+    linear-gradient(90deg, rgba(255, 47, 179, 0.18) 0%, transparent 16%),
+    linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.22) 28%, transparent 45%),
+    linear-gradient(90deg, transparent 45%, rgba(255, 47, 179, 0.16) 58%, transparent 75%),
+    radial-gradient(circle at 25% 30%, rgba(255, 47, 179, 0.35), transparent 28%),
+    radial-gradient(circle at 75% 35%, rgba(0, 240, 255, 0.42), transparent 30%),
+    linear-gradient(135deg, #050816 0%, #071b2a 35%, #062f3b 58%, #051020 100%);
 }
 
 .nav {
@@ -90,7 +89,6 @@ body {
   filter: blur(18px);
   opacity: 0.75;
   z-index: -1;
-  animation: pinkGlitchFlow 2.4s linear infinite;
 }
 
 .hero::after {
