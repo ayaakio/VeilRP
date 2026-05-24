@@ -1,227 +1,426 @@
+/* =========================================
+   VEILRP GENESIS - STYLE.CSS
+========================================= */
+
 :root {
-  --bg: #020711;
-  --panel: rgba(3, 18, 34, 0.82);
-  --cyan: #00eaff;
-  --cyan-soft: rgba(0, 234, 255, 0.35);
+  --cyan: #00f0ff;
+  --cyan-soft: rgba(0, 240, 255, 0.25);
+
   --pink: #ff2fb3;
-  --pink-soft: rgba(255, 47, 179, 0.35);
-  --text: #ffffff;
-  --muted: #c7f7ff;
+  --pink-soft: rgba(255, 47, 179, 0.25);
+
+  --white: #ffffff;
+  --text-soft: #d9f7ff;
 }
 
+/* =========================================
+   GLOBAL
+========================================= */
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+
   font-family: Arial, sans-serif;
-  color: var(--text);
+
+  color: white;
+
   text-align: center;
+
   min-height: 100vh;
+
   background:
-    radial-gradient(circle at 20% 20%, rgba(0, 234, 255, 0.16), transparent 28%),
-    radial-gradient(circle at 80% 35%, rgba(255, 47, 179, 0.14), transparent 30%),
-    linear-gradient(135deg, #020711 0%, #050014 48%, #00111d 100%);
+    radial-gradient(circle at top left, rgba(0,255,255,0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,0,140,0.18), transparent 30%),
+    linear-gradient(
+      135deg,
+      #1a0033 0%,
+      #12002b 30%,
+      #001d3d 70%,
+      #002d46 100%
+    );
+
+  overflow-x: hidden;
+
+  animation: backgroundShift 10s ease infinite alternate;
 }
+
+/* =========================================
+   NAVBAR
+========================================= */
 
 .nav {
   display: flex;
+
   justify-content: center;
-  gap: 32px;
+
+  align-items: center;
+
+  gap: 35px;
+
   padding: 18px;
-  background: rgba(2, 7, 17, 0.9);
-  border-bottom: 1px solid rgba(0, 234, 255, 0.35);
+
+  background: rgba(12, 0, 30, 0.45);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(0,255,255,0.22);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
 }
 
 .nav a {
-  color: #dffbff;
+  color: var(--text-soft);
+
   text-decoration: none;
+
   font-weight: bold;
+
+  transition: all 0.3s ease;
 }
 
 .nav a:hover {
-  color: var(--pink);
-  text-shadow: 0 0 12px var(--pink);
+  color: var(--cyan);
+
+  text-shadow:
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan),
+    0 0 35px var(--pink);
 }
+
+/* =========================================
+   WRAPPER
+========================================= */
 
 .menu-wrapper {
-  min-height: calc(100vh - 58px);
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 55px 20px 50px;
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 50px 20px;
 }
 
+/* =========================================
+   HERO / LOGO
+========================================= */
+
 .hero {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .logo {
-  width: 210px;
-  max-width: 80%;
-  border-radius: 32px;
-  animation: floatLogo 4s ease-in-out infinite;
+  width: 230px;
+
+  border-radius: 35px;
+
+  position: relative;
+
+  animation:
+    floatLogo 4s ease-in-out infinite,
+    logoPulse 3s infinite alternate;
+
   filter:
-    drop-shadow(0 0 18px rgba(0, 234, 255, 0.7))
-    drop-shadow(0 0 28px rgba(255, 47, 179, 0.45));
+    drop-shadow(0 0 20px rgba(0,255,255,0.7))
+    drop-shadow(0 0 45px rgba(255,47,179,0.45));
 }
+
+/* =========================================
+   MENU GRID
+========================================= */
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(210px, 1fr));
-  gap: 26px;
-  max-width: 1100px;
-  margin: 0 auto 38px;
+
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+
+  gap: 28px;
+
+  max-width: 1150px;
+
+  margin: 0 auto 40px;
 }
 
+/* =========================================
+   MENU CARDS
+========================================= */
+
 .menu-card {
-  min-height: 185px;
-  padding: 30px 24px;
+  min-height: 190px;
+
+  padding: 32px 24px;
+
   border-radius: 24px;
+
   background:
-    linear-gradient(145deg, rgba(0, 234, 255, 0.09), rgba(255, 47, 179, 0.06)),
-    var(--panel);
-  border: 1px solid rgba(0, 234, 255, 0.55);
-  color: var(--text);
+    linear-gradient(
+      145deg,
+      rgba(0,255,255,0.08),
+      rgba(255,0,140,0.07)
+    );
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0,255,255,0.4);
+
+  color: white;
+
   text-decoration: none;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
+  transition: all 0.3s ease;
+
   box-shadow:
-    inset 0 0 20px rgba(0, 234, 255, 0.05),
-    0 0 22px rgba(0, 234, 255, 0.16);
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    0 0 20px rgba(0,255,255,0.15);
 }
 
 .menu-card:hover {
-  transform: translateY(-10px) scale(1.035);
+  transform: translateY(-10px) scale(1.03);
+
   border-color: var(--pink);
+
   box-shadow:
-    0 0 24px rgba(0, 234, 255, 0.55),
-    0 0 42px rgba(255, 47, 179, 0.38);
+    0 0 30px rgba(0,255,255,0.55),
+    0 0 60px rgba(255,47,179,0.4);
 }
 
 .menu-card h2 {
-  margin: 0 0 12px;
-  font-size: 1.85rem;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 234, 255, 0.45);
+  margin-bottom: 12px;
+
+  font-size: 2rem;
+
+  color: white;
+
+  text-shadow:
+    0 0 12px rgba(0,255,255,0.4);
 }
 
 .menu-card p {
-  margin: 0;
-  color: var(--muted);
+  color: var(--text-soft);
+
+  line-height: 1.5;
+
   font-size: 1rem;
-  line-height: 1.4;
 }
+
+/* =========================================
+   FOOTER TEXT
+========================================= */
 
 .footer-text,
 .menu-wrapper > p {
-  color: #dffbff;
+  color: var(--text-soft);
+
   margin-top: 10px;
+
+  font-size: 1rem;
 }
 
+/* =========================================
+   DISCORD BUTTON
+========================================= */
+
 .discord-section {
-  margin-top: 22px;
+  margin-top: 25px;
 }
 
 .discord-button {
   display: inline-block;
-  padding: 13px 28px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--cyan), var(--pink));
-  color: #ffffff;
+
+  padding: 14px 30px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00f0ff,
+      #ff2fb3
+    );
+
+  color: white;
+
   text-decoration: none;
+
   font-weight: bold;
+
+  transition: all 0.3s ease;
+
   box-shadow:
-    0 0 18px rgba(0, 234, 255, 0.45),
-    0 0 26px rgba(255, 47, 179, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+    0 0 22px rgba(0,255,255,0.45),
+    0 0 35px rgba(255,47,179,0.3);
 }
 
 .discord-button:hover {
-  transform: scale(1.06);
+  transform: scale(1.08);
+
   box-shadow:
-    0 0 26px rgba(0, 234, 255, 0.8),
-    0 0 40px rgba(255, 47, 179, 0.65);
+    0 0 30px rgba(0,255,255,0.8),
+    0 0 50px rgba(255,47,179,0.6);
 }
 
-/* Staff page */
+/* =========================================
+   STAFF PAGE
+========================================= */
+
 .staff-section-title {
-  margin-top: 50px;
+  margin-top: 55px;
+
   margin-bottom: 20px;
+
   font-size: 2rem;
-  color: #ffffff;
+
+  color: white;
+
   text-shadow:
-    0 0 14px rgba(0, 234, 255, 0.65),
-    0 0 20px rgba(255, 47, 179, 0.35);
+    0 0 14px rgba(0,255,255,0.6),
+    0 0 20px rgba(255,47,179,0.3);
 }
 
 .staff-grid {
   display: flex;
+
   justify-content: center;
+
   flex-wrap: wrap;
+
   gap: 32px;
-  margin-bottom: 25px;
+
+  margin-bottom: 20px;
 }
 
 .staff-card {
   width: 150px;
+
   text-align: center;
 }
 
 .staff-img {
   width: 125px;
   height: 125px;
+
   object-fit: cover;
+
   border-radius: 28px;
-  border: 1px solid rgba(0, 234, 255, 0.6);
+
+  border: 1px solid rgba(0,255,255,0.55);
+
   box-shadow:
-    0 0 18px rgba(0, 234, 255, 0.35),
-    0 0 28px rgba(255, 47, 179, 0.22);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    0 0 20px rgba(0,255,255,0.3),
+    0 0 28px rgba(255,47,179,0.2);
+
+  transition: all 0.3s ease;
 }
 
 .staff-img:hover {
   transform: scale(1.08);
+
   border-color: var(--pink);
+
   box-shadow:
-    0 0 25px rgba(0, 234, 255, 0.7),
-    0 0 38px rgba(255, 47, 179, 0.55);
+    0 0 30px rgba(0,255,255,0.7),
+    0 0 45px rgba(255,47,179,0.55);
 }
 
 .staff-name {
   margin-top: 12px;
+
   font-weight: bold;
-  color: #ffffff;
+
+  color: white;
 }
+
+/* =========================================
+   ANIMATIONS
+========================================= */
 
 @keyframes floatLogo {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
+@keyframes logoPulse {
+  0% {
+    filter:
+      drop-shadow(0 0 20px rgba(0,255,255,0.6))
+      drop-shadow(0 0 35px rgba(255,47,179,0.25));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 30px rgba(0,255,255,0.95))
+      drop-shadow(0 0 55px rgba(255,47,179,0.65));
+  }
+
+  100% {
+    filter:
+      drop-shadow(0 0 20px rgba(0,255,255,0.6))
+      drop-shadow(0 0 35px rgba(255,47,179,0.25));
+  }
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 1000px) {
+
   .menu-grid {
-    grid-template-columns: repeat(2, minmax(210px, 1fr));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+
     max-width: 650px;
   }
 }
 
 @media (max-width: 650px) {
+
   .nav {
     gap: 16px;
+
     flex-wrap: wrap;
   }
 
   .menu-grid {
     grid-template-columns: 1fr;
+
     max-width: 380px;
   }
 
   .logo {
-    width: 170px;
+    width: 180px;
   }
 }
