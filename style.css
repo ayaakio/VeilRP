@@ -3,19 +3,19 @@
 ========================================= */
 
 :root {
-  --bg-main: #05000d;
-  --bg-secondary: #120424;
+     bg-main: #05000d;
+     bg-secondary: #120424;
 
-  --cyan: #00d9ff;
-  --cyan-soft: rgba(0, 217, 255, 0.2);
-  --cyan-glow: rgba(0, 217, 255, 0.75);
+     cyan: #00d9ff;
+     cyan-soft: rgba(0, 217, 255, 0.2);
+     cyan-glow: rgba(0, 217, 255, 0.75);
 
-  --pink: #ff3cac;
-  --pink-soft: rgba(255, 60, 172, 0.2);
-  --pink-glow: rgba(255, 60, 172, 0.75);
+     pink: #ff3cac;
+     pink-soft: rgba(255, 60, 172, 0.2);
+     pink-glow: rgba(255, 60, 172, 0.75);
 
-  --white: #ffffff;
-  --text-soft: #d7d7ff;
+     white: #ffffff;
+     text-soft: #d7d7ff;
 }
 
 /* =========================================
