@@ -22,12 +22,23 @@ body {
   overflow-x: hidden;
 
   background:
-    linear-gradient(90deg, rgba(255, 47, 179, 0.18) 0%, transparent 16%),
-    linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.22) 28%, transparent 45%),
-    linear-gradient(90deg, transparent 45%, rgba(255, 47, 179, 0.16) 58%, transparent 75%),
-    radial-gradient(circle at 25% 30%, rgba(255, 47, 179, 0.35), transparent 28%),
-    radial-gradient(circle at 75% 35%, rgba(0, 240, 255, 0.42), transparent 30%),
-    linear-gradient(135deg, #050816 0%, #071b2a 35%, #062f3b 58%, #051020 100%);
+    radial-gradient(circle at top left,
+      rgba(255, 47, 179, 0.28),
+      transparent 32%
+    ),
+
+    radial-gradient(circle at top right,
+      rgba(0, 240, 255, 0.35),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      135deg,
+      #070b18 0%,
+      #101b35 30%,
+      #0a4f63 68%,
+      #05111f 100%
+    );
 }
 
 .nav {
